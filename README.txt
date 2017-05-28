@@ -7,13 +7,12 @@ Pre - Requirements:
 Deployement Steps on a window machine:
 1. virtualenv env
 2. env/Scripts/activate
-3. cd QuotePost
-4. pip install -r requirements.pip
+3. Go to directory where you have cloned the source
+4. pip install -r requirements.txt ( might take around 15-20 mins  to download and install)
 5. cd QuotePost
 6. python manage.py makemigrations
 7. python manage.py migrate
 8. python manage.py runserver
-
 9. go to browser to address localhost:8000/filldb It will populate your db with around 300 entries
 
 the server will run at localhost:8000
