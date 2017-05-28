@@ -5,8 +5,9 @@ Pre - Requirements:
 	virtualenv
 	
 Deployement Steps on a window machine:
+In Command Prompt write following commands
 1. virtualenv env
-2. env/Scripts/activate
+2. env\Scripts\activate
 3. Go to directory where you have cloned the source
 4. pip install -r requirements.txt ( might take around 15-20 mins  to download and install)
 5. cd QuotePost
