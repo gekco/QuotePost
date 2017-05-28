@@ -1,0 +1,10 @@
+Django==1.8.2
+facepy==1.0.8
+httplib2==0.9.1
+oauth2client==1.4.12
+oauthlib==1.1.2
+Pillow==4.1.1
+python-social-auth==0.2.19
+python3-openid==3.0.10
+requests-oauthlib==0.6.1
+virtualenv==15.0.2

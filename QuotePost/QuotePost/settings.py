@@ -54,8 +54,8 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'QuotePost.urls'
 LOGIN_REDIRECT_URL = '/'
-SOCIAL_AUTH_FACEBOOK_KEY = 1420843534621486
-SOCIAL_AUTH_FACEBOOK_SECRET = '94abc56992615849eb63ecce306dc61c'
+SOCIAL_AUTH_FACEBOOK_KEY = 323263558103975
+SOCIAL_AUTH_FACEBOOK_SECRET = 'e3080deca405effc547969bb8f0ab3f0'
 
 TEMPLATES = [
     {
@@ -85,7 +85,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'QuotePost.wsgi.application'
 
 AUTHENTICATION_BACKENDS = (
-   'social.backends.facebook.FacebookOAuth2',
+   'QuotePost.customFacebookOAuth2.CustomFacebookOAuth2',
    'django.contrib.auth.backends.ModelBackend',
 )
 
