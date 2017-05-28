@@ -61,18 +61,19 @@ class DBServices():
 #fill the db with  HardCoded Entries for the purpose of Testing
 	def fillDB(self):
 		Quotes.objects.all().delete()
-		quotes = [ "My Quote iS Savage, But You Aint gonna get it.",
-			"My life is like Black & White",
-			"When Nothing goes Right Go Left."
-			]
+		with open('quotes.txt','r') as f:
+			quotes = f.readlines()
+		
+		quotes = [x.strip() for x in quotes] 
+		
 		userNames = [ 'BettyAlagfbejcaeeiYangman' , 'MariaAlagfacccbibdMartinazzisen' , 'JohnAlageebhbhafgBharambesky' ]
 
 		j = 1
 		print("Adding Entries to DB")
 		with transaction.atomic():
 			for user in userNames:
-				for i in range(1,1000):
-					Quotes(userName = user, quote = str(j) + "." + quotes[i%3], isAlreadyPosted = False).save()
+				for quote in quotes:
+					Quotes(userName = user, quote = quote, isAlreadyPosted = False).save()
 					j = j + 1
 
 		transaction.commit()
