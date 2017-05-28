@@ -34,7 +34,7 @@ class DBServices():
 		return [1, RESPONSE_SUCCESS_SAVE]
 	
 	def fetchQuote(self,userName):
-		quotesToSend = Quotes.objects.filter(userName = userName)					#find all quotes of user
+		quotesToSend = Quotes.objects.filter(userName = userName, isAlreadyPosted = False)					#find all quotes of user
 		
 		if( quotesToSend.count() == 0 ):
 			return [0, RES_NO_SAVED_QUOTES, 0]
