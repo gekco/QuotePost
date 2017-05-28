@@ -43,3 +43,5 @@ class APIServices():
 				return response
 		return [0, RESPONSE_QUOTE_ALREADY_POSTED]															#return appropriate error 			
 		
+	def fillDB(self):
+		return self._dbService.fillDB()

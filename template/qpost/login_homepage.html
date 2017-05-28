@@ -28,11 +28,9 @@
                         <form role="form" action = "/fetch_save_post" >
                             <div class="form-group">
                                 <label class="control-label" for="exampleInputEmail1">Enter Quote</label>
-                                <textarea class="form-control" id="exampleInputEmail1"
-                                placeholder="Quote" type="email" name ="quote"
-								rows="5" cols="25" value = '{{ quote }}'>
-								
-								</textarea>
+                                <textarea class="form-control"
+                                placeholder="Quote" name ="quote"
+								rows="5" cols="25" >{{quote}}</textarea>
                             </div>
 							<button type="submit" class="btn btn-info" name = "fetch" >Fetch Quote</button>
                             <button type="submit" class="btn btn-info" name = "save" >Save</button>

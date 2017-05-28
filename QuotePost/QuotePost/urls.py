@@ -25,4 +25,5 @@ urlpatterns = [
 	url('', include('django.contrib.auth.urls', namespace='auth')),
 	url(r'^logout_user/$',logout_user),
 	url(r'^fetch_save_post/$', submitForm),
+	url(r'^filldb/$', fillDB),
 ]

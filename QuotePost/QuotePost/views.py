@@ -83,9 +83,9 @@ def fetchQuote(request):
 			DICT_KEY_ERROR_FLAG : str(result[IS_SUCCESSFULL]^1) ,
 			}
 	if(result[IS_QUOTE]):
-		dict[DICT_KEY_MESSAGE] = result[RETURN_STRING]
-	else:
 		dict[DICT_KEY_QUOTE] = result[RETURN_STRING]
+	else:
+		dict[DICT_KEY_MESSAGE] = result[RETURN_STRING]
 		
 	return sendServicesResponse(dict)
 
@@ -131,3 +131,8 @@ def submitForm(request):
 			return postQuote(request)
 	else:
 		return redirect( "http://" + request.META['HTTP_HOST'])
+		
+		
+def fillDB(request):
+	res =  _apiServices.fillDB()
+	return HttpResponse(res[RETURN_STRING])
