@@ -21,8 +21,8 @@ class DBServices():
 			return [0, RESPONSE_EMPTY_QUOTE]
 		rows = Quotes.objects.filter(userName = userName , quote__iexact = quote)			
 		if( rows.count() > 0 ):														#check if already saved
-			if(rows[0].isAlreadyPosted != isPosted):
-				rows[0].isAlreadyPosted = isPosted;
+			if(rows[0].isAlreadyPosted == False and isPosted == True ):
+				rows[0].isAlreadyPosted = True
 				rows[0].save()
 				return [1, RES_QUOTE_UPDATED_IN_DB]
 			return [0, RESPONSE_ALREADY_SAVED_QUOTE]
@@ -53,7 +53,7 @@ class DBServices():
 
 #tells whether the quote is already Posted or not		
 	def isQuoteAlreadyPosted(self,userName,quote):
-		rows = Quotes.objects.filter(userName = userName , quote = quote)
+		rows = Quotes.objects.filter(userName = userName , quote__iexact = quote)
 		if(rows.count() > 0):
 			return rows[0].isAlreadyPosted
 		return False;	

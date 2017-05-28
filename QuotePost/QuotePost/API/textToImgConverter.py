@@ -16,7 +16,7 @@ SEPARATOR_UNDERSCORE = "_"
 DEFAULT_EXTENSION = '.jpg'
 
 
-DEFAULT_IMG_FONT_PATH = "../image_files/"
+DEFAULT_IMG_FONT_PATH = "../bgImageFiles/"
 
 FONT_FILE = "CHOPS___.ttf"
 
