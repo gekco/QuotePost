@@ -1,0 +1,1 @@
+This directory is where all the quote images are saved. Do not delete this directory.

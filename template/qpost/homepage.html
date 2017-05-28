@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    {% load staticfiles %}
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+        rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <div class="cover">
+            <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1422222948315-28aadb7a2cb8?fm=jpg&amp;s=cfeadbd7a991e58b553bee29a7eeca55')"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="text-primary">
+                            <i class="fa fa-fw fa-arrow-circle-right"></i>QuotePost</h1>
+                        <p class="text-inverse"></p>
+                        <br>
+                        <br>
+                        <a class="btn btn-lg btn-primary" href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}" ><font face="FontAwesome"><span style="font-size: 36px; line-height: 36px;">Log in &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></font><i class="fa fa-2x fa-facebook-square fa-fw"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
