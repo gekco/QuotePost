@@ -9,3 +9,4 @@ python3-openid==3.0.10
 uritemplate==0.6
 w3lib==1.12.0
 requests-oauthlib==0.6.1
+requests==2.10.0
