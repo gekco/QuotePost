@@ -4,6 +4,13 @@ Pre - Requirements:
 	python 3.4
 	virtualenv
 	
+API Code is present Mainly in Following files:
+
+refer to design.png in screenshotsAndDocs
+1. QuotePost/QuotePost/views.py
+2. QuotePost/QuotePost/API
+3. model in QuotePost/quotes/models.py
+
 Deployement Steps on a window machine:
 In Command Prompt write following commands
 1. virtualenv env
